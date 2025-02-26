@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<link href="projectStyle.css" rel="stylesheet"> 
+ <link href="comonStyle.css" rel="stylesheet"> 
+<!-- <link rel="stylesheet" href="StudentActivity.css" > -->
+
+<link rel="stylesheet" type="text/css" href="Activity.css">
+
+<title>search Activities</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo copy.png">  
+    <link rel="icon" type="image/x-icon" href="favicon.ico"> 
+    <link rel="shortcut icon" href="favicon.ico"> 
+
+<script src="https://kit.fontawesome.com/4a004544d6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+<div class="navbar">
+<ul class="nav-links">
+<img src="logo.png" alt="gitclub logo" height="40" width="100">
+<img src="StudentProfile.png" alt="Profile" class="profile" onclick="toggleSidebar()">
+<li><a href="HomePage.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="Blog.html">Blog</a></li>
+<li><a href="mailto:email@example.com">Contact</a></li>
+</ul>
+</div>
+
+
+
+
+<div class="sidebar" id="sidebar">
+    <img src="StudentProfile.png" alt="Profile">
+    <ul>
+      <li><a href="studentActivitySearch.html"> Activities</a></li>
+        <li><a href="PreviosActicity.html">My Activities</a></li>
+        <li><a href="#">Manage profile</a></li>
+        <li><a href="HomePage.html">Sign out</a></li>
+    </ul>
+  </div>
+
+<br><br><br><br><br><br><br>
+
+<form class="search-container">
+  <input type="search" placeholder="Search..." aria-label="Search">
+  <button type="submit">
+      <i class="fas fa-search"></i> 
+  </button>
+
+  <!-- Dropdown with a filter icon -->
+  <div class="dropdown">
+      <button class="dropbtn">
+          <i class="fas fa-filter"></i> <!-- Filter icon -->
+      </button>
+      <div class="dropdown-content" id="categoryFilter">
+          <a href="#" data-category="all">All Categories</a>
+          <a href="#" data-category="hackathon">Hackathon</a>
+          <a href="#" data-category="photograph">Photograph</a>
+          <a href="#" data-category="challenge">Challenge</a>
+          <a href="#" data-category="game">Game Development</a>
+      </div>
+  </div>
+</form>
+
+
+
+
+
+
+<div class="wrap">
+   
+<div id="activity-with-search">
+<div class="activity">
+
+  <!-- <a href="your-page.html" style="text-decoration: none; color: inherit;"> -->
+    <a href="activityDetails.html" class="activity-card">
+      <div class="activity-content">
+        <img src="ksuHackathon.jpg" alt="KSU Hackathon Logo">
+        <h2>KSU Hackathon</h2>
+        <p>Creativity sets us apart, and ideas are our energy! Your first step to success.</p>
+        <div class="upcoming">
+          <label><i class="fa">&#xf017;&nbsp;</i>9/11/2024</label>
+        </div>
+      </div>
+    </a>
+    
+
+
+<div class="FirstAct">
+<img src="knba.png.jpg" alt="Logo">
+<h2>knaba</h2>
+<p>Unlock New Insights with Dr. Nora Bin Saeed! 🚀 Join us for an inspiring session.</p>
+<div class="upcoming">
+<label><i style="font-size:13px; color: white;" class="fa">&#xf017;&nbsp;</i>9/11/2024</label>
+</div>
+</div>
+
+<div class="FirstAct">
+<img src="FTC.png.jpg" alt="Logo">
+<h2>FTC Challenge</h2>
+<p>oin the FTC Innovators Challenge and embark on a journey of creativity and innovation! </p>
+<div class="upcoming">
+<label><i style="font-size:13px; color: white;" class="fa">&#xf017;&nbsp;</i>9/11/2024</label>
+</div>
+</div>
+
+<div class="FirstAct">
+<img src="FTC.png.jpg" alt="Logo">
+<h2>FTC JAM</h2>
+<p>FTC Jam Hackathon for Game Development, exclusively for high school students.</p>
+<div class="upcoming">
+<label><i style="font-size:13px; color: white;" class="fa">&#xf017;&nbsp;</i>9/11/2024</label>
+</div>
+</div>
+
+<div class="FirstAct">
+<img src="FTC.png.jpg" alt="Logo">
+<h2>photograph </h2>
+<p>Join Us for an Inspiring Session! Learn advanced photography techniques
+<br>
+</p>
+<div class="upcoming">
+<label><i style="font-size:13px; color: white;" class="fa">&#xf017;&nbsp;</i>9/11/2024</label>
+</div>
+</div>
+<div class="FirstAct">
+<img src="FTC.png.jpg" alt="Logo">
+<h2>photograph </h2>
+<p>Join Us for an Inspiring Session! Learn advanced photography techniques
+<br>
+</p>
+<div class="upcoming">
+<label><i style="font-size:13px; color: white;" class="fa">&#xf017;&nbsp;</i>9/11/2024</label>
+</div>
+</div>
+<div class="FirstAct">
+<img src="FTC.png.jpg" alt="Logo">
+<h2>photograph </h2>
+<p>Join Us for an Inspiring Session! Learn advanced photography techniques
+<br>
+</p>
+<div class="upcoming">
+<label><i style="font-size:13px; color: white;" class="fa">&#xf017;&nbsp;</i>9/11/2024</label>
+</div>
+</div>
+<div class="FirstAct">
+<img src="FTC.png.jpg" alt="Logo">
+<h2>photograph </h2>
+<p>Join Us for an Inspiring Session! Learn advanced photography techniques
+<br>
+</p>
+<div class="upcoming">
+<label><i style="font-size:13px; color: white;" class="fa">&#xf017;&nbsp;</i>9/11/2024</label>
+</div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+<footer>
+
+
+<a id=" location"href="https://maps.app.goo.gl/3rp62YkjKF63yKwy5?g_st=com.google.maps.preview.copy">King Saud University,Riyadh,Saudi Arabia</a>
+<i class="fa-solid fa-phone-volume"></i>
+<i class="fa-brands fa-linkedin"></i>
+<i class="fa-brands fa-instagram"></i>
+
+<a href="https://www.youtube.com" target="_blank">
+<i class="fa-brands fa-youtube"></i>
+</a>
+
+<i class="fa-brands fa-tiktok"></i>
+
+
+
+<p class="copyright">Copyright &copy; 2025 SWE381. King Saud University . All Rights Reserved</p>
+</footer>
+
+<script>
+function toggleSidebar() {
+document.getElementById("sidebar").classList.toggle("active");
+document.getElementById("main").classList.toggle("active");
+}
+document.querySelectorAll("#categoryFilter a").forEach(item => {
+    item.addEventListener("click", function (event) {
+        event.preventDefault();
+        
+        let selectedCategory = this.getAttribute("data-category");
+        let activities = document.querySelectorAll(".FirstAct");
+
+        activities.forEach(activity => {
+            let title = activity.querySelector("h2").textContent.toLowerCase();
+
+            if (selectedCategory === "all") {
+                activity.style.display = "block"; // Show all activities
+            } else if (title.includes(selectedCategory)) {
+                activity.style.display = "block"; // Show only matching activities
+            } else {
+                activity.style.display = "none"; // Hide non-matching activities
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>

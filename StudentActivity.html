@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="StudentActivity.css" />
+   
+
+</head>
+
+<body>
+    
+    <div class="navbar">
+        <ul class="nav-links">
+            <img src="logo.png" alt="gitclub logo" height="40" width="100">
+            <img src="StudentProfile.png" alt="Profile" class="profile" onclick="toggleSidebar()">
+            <li><a href="HomePage.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="mailto:email@example.com">Contact</a></li>
+        </ul>
+    </div>
+    
+    
+    <div class="sidebar" id="sidebar">
+        <img src="StudentProfile.png" alt="Profile">
+        <ul>
+            <li><a href="#">Activities</a></li>
+            <li><a href="#">Manage profile</a></li>
+            <li><a href="HomePage.html">Sign out</a></li>
+        </ul>
+    </div>
+     <div id="activity"> 
+        <p>Activity</p>
+       <div><button  onclick="deleteMessage()"> Delete</button></div>
+     </div>
+    <script>
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+            document.getElementById("main").classList.toggle("active");
+        }
+
+       function deleteMessage() {
+        let response= window.confirm("Do you want to unregister?");
+        if(response)
+        document.getElementById("activity").style.display= "none";
+
+       }
+    </script>
+</body>
+</html>
+
+</html>

@@ -1,0 +1,181 @@
+
+    body {
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+        padding-top: 50px; /* space 1 */
+    }
+    
+    #forget-signIn{
+        margin-top: 20%; /* space 2 */
+        
+
+    }
+.Registration{
+    margin-top: 60%; /* space 2 */
+    display: flex;
+    width: 1000px;  /*عرض الفورم كامل */
+    background: #f5ebeb;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* for student margin */
+.sRegistration{
+    margin-top: 30%; /* space 2 */
+    display: flex;
+    width: 1000px;  /*عرض الفورم كامل */
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-box {
+    width: 50%;
+    padding: 30px;
+    background: white;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+label {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+select , input{
+    
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+
+.btnSecondary{
+    background-color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn {
+    background-color: #567C8D;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+   
+}
+.btn a{
+
+    color: rgb(255, 255, 255);
+
+}
+/* .Registration button a {
+    color: rgb(62, 6, 6);
+} */
+
+.social-signup {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.social-btn {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    margin: 5px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+.signin-text {
+    text-align: center;
+    margin-top: 10px;
+    
+}
+
+
+.info-box {
+   height: auto;
+    width: 50%;
+    background: #4C7B8B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo img {
+    width: 150px;
+    margin-bottom: 10px;
+}
+/* For the white button */
+.secondary {
+    background: white;
+    color: #6f8773;
+}
+video {
+    object-fit: contain;
+    /* overflow-clip-margin: content-box;/////////////////////////////////////////// */
+    overflow: clip;
+}
+#map {
+    height: 300px;
+    width: 100%;
+    }
+    .heading{
+        text-align: center;
+        font-weight: 400;
+        font-size: 30px;
+        color:  #333;
+        margin-bottom:5px;
+      }
+    
+    
+      .forgetPassword {
+        display: block;
+       }
+
+
+       
+    .forgetPassword a{ 
+     font-size: 15px ;
+     text-decoration: none;
+           }
+    a {
+    text-decoration: none;
+    
+    }
+    .btn secondary{
+        color: red;
+    }
+    /* form button{
+        color: red;
+        background-color: red;
+
+    } */

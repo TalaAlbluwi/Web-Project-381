@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Student Profile</title>
+    
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" /> -->
+	<link rel="stylesheet" href="ManageStudentProfile.css" />
+    <link rel="stylesheet" href="comonStyle.css" />
+    <link rel="stylesheet" href="StudentActivity.css" />
+
+    <script >
+    function toggleSidebar() {
+        document.getElementById("sidebar").classList.toggle("active");
+        document.getElementById("main").classList.toggle("active");
+    }</script>
+</head>
+
+<body>
+
+     <div class="navbar">
+    <ul class="nav-links">
+        <img src="logo.png" alt="gitclub logo" height="40" width="100">
+        <img src="StudentProfile.png" alt="Profile" class="profile" onclick="toggleSidebar()">
+        <li><a href="HomePage.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="mailto:email@example.com">Contact</a></li>
+    </ul>
+</div>
+
+<div class="sidebar" id="sidebar">
+  <img src="StudentProfile.png" alt="Profile">
+  <ul>
+    <li><a href="studentActivitySearch.html"> Activities</a></li>
+      <li><a href="PreviosActicity.html">My Activities</a></li>
+      <li><a href="#">Manage profile</a></li>
+      <li><a href="HomePage.html">Sign out</a></li>
+  </ul>
+</div>
+
+
+
+    <div id="main">
+
+    <h1 id="header">Profile</h1>
+	<h2>Profile picture</h2>
+	<h4>Click to edit</h4>
+    <img id="profilePic" src="blank-profile-picture.png" alt="profile picture">
+	<input type="file" id="file-input" accept="image/*">
+	
+	
+	<h2>Name</h2>
+	<input id="Name" type="text" value="Sara Fahad" size="50"> <!--value here shall be the name enterd in sign up-->
+	
+    <h2>ID</h2>
+	<input id="ID" type="text" value="444268970" size="50">
+
+    <h2>Major</h2>
+	<input id="major" type="text" value="Software Engineering" maxlength="10" size="50">
+
+	<h2>Email</h2>
+	<input id="Email" type="text" value="sarafahad@gmail.com" size="50"> <!--value here shall be the email enterd in sign up-->
+	
+	<h2>Phone number</h2>
+	<input id="Phone" type="text" value="0555550000" maxlength="10" size="50"> <!--value here shall be the phone enterd in sign up-->
+   
+	<h2>Password</h2>
+	<input id="password" type="password" value="123456" size="50">
+
+	<div><button id="save" onclick="saveAll()">Save change</button></div>
+
+    </div>
+	
+
+	<script>
+
+		const profilePic = document.getElementById("profilePic");
+        const fileInput = document.getElementById("file-input");
+
+        // When the image is clicked, trigger the file input
+        profilePic.addEventListener("click", () => {
+            fileInput.click();
+        });
+
+        // When a file is selected, change the image source
+        fileInput.addEventListener("change", (event) => {
+            const file = event.target.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    profilePic.src = e.target.result; // Update the image
+                };
+                reader.readAsDataURL(file);
+				document.getElementById("save").style.display = "inline-block";
+            }
+        });
+
+
+        document.getElementById("Name").addEventListener("input", () => {
+            document.getElementById("save").style.display = "inline-block"; // Show button when input changes
+        });
+		
+		document.getElementById("Email").addEventListener("input", () => {
+            document.getElementById("save").style.display = "inline-block"; // Show button when input changes
+        });
+		
+		document.getElementById("Phone").addEventListener("input", () => {
+            document.getElementById("save").style.display = "inline-block"; // Show button when input changes
+        });
+		
+		document.getElementById("ID").addEventListener("input", () => {
+            document.getElementById("save").style.display = "inline-block"; // Show button when input changes
+        });
+
+        document.getElementById("password").addEventListener("input", () => {
+            document.getElementById("save").style.display = "inline-block"; // Show button when input changes
+        });
+		
+        document.getElementById("major").addEventListener("input", () => {
+            document.getElementById("save").style.display = "inline-block"; // Show button when input changes
+        });
+		
+    
+		function saveAll() {
+		clubName= document.getElementById("Name").value;
+		studentEmail= document.getElementById("Email").value; 
+		studentPhone= document.getElementById("Phone").value;
+		studentPassword= document.getElementById("password").value; 
+        studentMajor= document.getElementById("major").value;
+        studentPhone= document.getElementById("ID").value;
+		}
+
+    </script>
+
+</body>

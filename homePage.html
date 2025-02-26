@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title> home page</title>
+<link rel="stylesheet" type="text/css" href="projectStyle.css">
+<link rel="stylesheet" type="text/css" href="comonStyle.css">
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="logo copy.png"> 
+<link rel="icon" type="image/x-icon" href="favicon.ico">  
+<link rel="shortcut icon" href="favicon.ico"> 
+
+<script src="https://kit.fontawesome.com/4a004544d6.js" crossorigin="anonymous"></script>
+    </head>
+        <ul class="Home_page_navigation_bar">
+            <li ><img src="logo.png" alt="gitclub logo" hieght="100" width="100"></li>
+            <li ><a href="about.html">About</a></li>
+            <li ><a href="Blog.html">Blog</a></li>
+            <li ><a href="mailto:deitel@deitel.com">Contact</a></li>
+          </ul>
+          <iframe src='https://my.spline.design/ballsonballs-6864b72a5390cb3ceaa277bdcfd0d3a0/' frameborder='0'></iframe>
+
+<div class="home_page_content">
+    <img class="home_page_logo" src="logo2.png" alt="gitclub logo" >
+
+<h1>GITCLUB</h1>
+<h3>FROM ZERO TO HERO,TOGETHER</h3>
+<p class="home_page_paragraph">“Discover your journey beyond the classroom! We connect students with university clubs to unlock passions, build skills, and create lasting connections.”</p>
+</div>
+<div class="Home_page_role_selection">
+<div id="admin">   
+    <p><img src="Admin.png" width="190" hight="190" alt=Admin></a></p>
+    <br>
+    <h3>ADMIN</h3>
+    <p> <a  href="sign up.html">Sign up</a></p>
+     <a  href="SignIn.html">Sign in</a>
+</div>
+<div id="student">  
+   <p> <img src="student.png" width="190" hight="190" alt=Admin></a></p>
+   <br>
+   <h3>STUDENT</h3> 
+   <p> <a  href="sign up.html">Sign up</a></p>
+    <a  href="studentSignIn.html">Sign in</a>
+</div>
+<div id="club"> 
+   <p><img src="club.png" width="190" hight="190" alt=Admin></a></p> 
+   <br>
+   <h3>CLUB</h3>  
+   <p> <a  href="clubSignup.html">Sign up</a></p> 
+    <a  href="SignIn.html">Sign in</a>
+</div>
+</div>
+<div class="slideshow-container">
+    <H2>Upcoming activities!</H2>
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="activity1.jpeg" style="width:100%">
+  <div class="text">Student</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="activity2.jpeg" style="width:100%">
+  <div class="text">Student</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="activity3.jpeg" style="width:100%">
+  <div class="text">Student</div>
+
+  
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+
+
+          <!-- <iframe src='https://my.spline.design/ballsonballs-6864b72a5390cb3ceaa277bdcfd0d3a0/' frameborder='0' width='100%' height='100%'></iframe>  -->
+
+
+<footer>
+
+
+        <a id=" location"href="https://maps.app.goo.gl/3rp62YkjKF63yKwy5?g_st=com.google.maps.preview.copy">King Saud University,Riyadh,Saudi Arabia</a>
+        <i class="fa-solid fa-phone-volume"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-instagram"></i>
+        
+        <a href="https://www.youtube.com" target="_blank">
+        <i class="fa-brands fa-youtube"></i>
+        </a>
+        
+        <i class="fa-brands fa-tiktok"></i>
+
+
+
+
+<p class="copyright">Copyright &copy; 2025 SWE381. King Saud University . All Rights Reserved</p>
+</footer>
+    </body>
+
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="StudentActivity.css" />
+  <link rel="stylesheet" type="text/css" href="Activity.css">
+  <link rel="stylesheet" href="comonStyle.css">
+  <title>Activities</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo copy.png">  
+    <link rel="icon" type="image/x-icon" href="favicon.ico"> 
+    <link rel="shortcut icon" href="favicon.ico"> 
+
+  <script>
+    function writeReview() {
+      let review = prompt("write your review");
+      if (review) {
+        alert("your review is send"  + review);
+      }
+    }
+
+    function cancelActivity() {
+    event.target.closest(".FirstAct").remove();
+  }
+
+    function showSection(sectionId) {
+  document.querySelectorAll('.activity').forEach(section => {
+    section.style.display = 'none'; 
+  });
+
+  let activeSection = document.getElementById(sectionId);
+  activeSection.style.display = 'grid'; 
+  activeSection.style.gap = "15px"; 
+  activeSection.style.gridTemplateColumns = "repeat(4, 1fr)";
+  activeSection.style.justifyItems = "center";
+}
+  
+  window.onload = function() {
+    showSection('UP');
+  };
+
+ 
+  function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+            document.getElementById("main").classList.toggle("active");
+        }
+
+  </script>
+</head>
+<body>  
+
+  <div class="navbar">
+    <ul class="nav-links">
+        <img src="logo.png" alt="gitclub logo" height="40" width="100">
+        <img src="StudentProfile.png" alt="Profile" class="profile" onclick="toggleSidebar()">
+        <li><a href="HomePage.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="mailto:email@example.com">Contact</a></li>
+    </ul>
+</div>
+
+<div class="sidebar" id="sidebar">
+  <img src="StudentProfile.png" alt="Profile">
+  <ul>
+    <li><a href="studentActivitySearch.html"> Activities</a></li>
+      <li><a href="PreviosActicity.html">My Activities</a></li>
+      <li><a href="ManageStudentProfile.html">Manage profile</a></li>
+      <li><a href="HomePage.html">Sign out</a></li>
+  </ul>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+  <div class="wrap">
+    
+    <div class="Actibutton">
+      <button onclick="showSection('Pre')">Previous Activity</button>
+      <button onclick="showSection('UP')">Upcoming Activity</button>
+    </div>
+
+    <!-- Previous Activities -->
+    <div class="activity" id="Pre">
+      <div class="FirstAct">
+        <img src="vision.jpg" alt="Logo">
+        <h2> vision 2030</h2>
+        <p> Looking to meet 55 companies in one place?
+
+          vision 2030 Club is hosting the Career Guidance Exhibition!</p>
+        <div class="ButtonContainer">
+          <label>Attend</label>
+          <button onclick="writeReview()">Review</button>
+          <div class="Rate">Rate <input type="number" min="1" max="5"></div>
+        </div>
+      </div>
+
+      <div class="FirstAct">
+        
+        <img src="diwan.jpg" alt="Logo">
+        <h2>Diwan</h2>
+        <p>Are you a passionate writer looking to refine your skills?
+
+          Join the Writer’s Bootcamp, an intensive training program designed .</p>
+        <div class="MissedContainer">
+          <label>Missed</label>
+          <label>9/11/2024</label>
+        </div>
+      </div>
+
+      <div class="FirstAct">
+        <img src="knba.png.jpg" alt="Logo">
+        <h2>knaba</h2>
+        <p>Join Us for an Inspiring Session with Dr. Hanan Al-Hindi! ✨
+          <br>
+          Dive into the world of cybersecurity..</p>
+        <div class="ButtonContainer">
+          <label>Attend</label>
+          <button onclick="writeReview()">Review</button>
+          <div class="Rate">Rate <input type="number" min="1" max="5"></div>
+        </div>
+      </div>
+
+      <div class="FirstAct">
+        <img src="diyaa.jpeg" alt="Logo">
+        <h2> Diyaa</h2>
+        <p>On the journey of goodness, we walk, and under the guidance of the Quran, we thrive. 
+        .</p>
+        <div class="ButtonContainer">
+          <label>Attend</label>
+          <button onclick="writeReview()">Review</button>
+          <div class="Rate">Rate <input type="number" min="1" max="5"></div>
+        </div>
+      </div>
+
+      <div class="FirstAct">
+        <img src="Alshraka.jpg" alt="Logo">
+        <h2>Al-sharaka</h2>
+        <p> The Student Partnership Program, represented by the Support and Supply Committee, announces a volunteer opportunity.</p>
+        <div class="ButtonContainer">
+          <label>Attend</label>
+          <button onclick="writeReview()">Review</button>
+          <div class="Rate">Rate <input type="number" min="1" max="5"></div>
+        </div>
+      </div>
+
+      <div class="FirstAct">
+        <img src="ksuHackathon.jpg" alt="Logo">
+        <h2> KSU Hackathon </h2>
+        <p>The creativity sets us apart, and ideas are our energy!
+           #YourFirstStep to success, awaits you to be part of it.</p>
+        <div class="MissedContainer">
+          <label>Missed</label>
+          <label>9/11/2024</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Upcoming Activities -->
+    <div class="activity" id="UP">
+      <div class="FirstAct">
+        <img src="knba.png.jpg" alt="Logo">
+        <h2>knaba</h2>
+        <p>Unlock New Insights with Dr. Nora Bin Saeed! 🚀 Join us for an inspiring session filled with innovation. </p>
+        <div class="upcoming">
+          <button onclick="cancelActivity()">Cancel </button>  
+          <label>9/11/2024</label>
+        </div>
+      </div>
+
+      <div class="FirstAct">
+        <img src="knba.png.jpg" alt="Logo">
+        <h2>knaba</h2>
+        <p>Unlock New Insights with Dr. Nora Bin Saeed! 🚀 Join us for an inspiring session filled with innovation.</p>
+        <div class="upcoming">
+          <button onclick="cancelActivity()">Cancel </button>  
+          <label>9/11/2024</label>
+        </div>
+      </div>
+
+      <div class="FirstAct">
+        <img src="FTC.png.jpg" alt="Logo">
+        <h2>FTC Challenge</h2>
+        <p>oin the FTC Innovators Challenge and embark on a journey of creativity and innovation! </p>
+        <div class="upcoming">
+          <button onclick="cancelActivity()">Cancel </button>  
+          <label>9/11/2024</label>
+        </div>
+      </div>
+
+      <div class="FirstAct">
+        <img src="FTC.png.jpg" alt="Logo">
+        <h2>FTC JAM</h2>
+        <p>FTC Jam Hackathon for Game Development, exclusively for high school students.</p>
+        <div class="upcoming">
+          <button onclick="cancelActivity()">Cancel </button>  
+          <label>9/11/2024</label>
+        </div>
+      </div>
+
+      <div class="FirstAct">
+        <img src="FTC.png.jpg" alt="Logo">
+        <h2>photograph workshop</h2>
+        <p>Join Us for an Inspiring Session! Learn advanced photography techniques
+          <br>
+        </p>
+        <div class="upcoming">
+          <button onclick="cancelActivity()">Cancel </button>  
+          <label>9/11/2024</label>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+  <footer>
+
+
+    <a id=" location"href="https://maps.app.goo.gl/3rp62YkjKF63yKwy5?g_st=com.google.maps.preview.copy">King Saud University,Riyadh,Saudi Arabia</a>
+    <i class="fa-solid fa-phone-volume"></i>
+    <i class="fa-brands fa-linkedin"></i>
+    <i class="fa-brands fa-instagram"></i>
+    
+    <a href="https://www.youtube.com" target="_blank">
+    <i class="fa-brands fa-youtube"></i>
+    </a>
+    
+    <i class="fa-brands fa-tiktok"></i>
+
+
+
+<p class="copyright">Copyright &copy; 2025 SWE381. King Saud University . All Rights Reserved</p>
+</footer>
+</body>
+</html>
+
+
