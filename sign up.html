@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>sign up</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo copy.png"> 
+    <link rel="icon" type="image/x-icon" href="favicon.ico">  
+    <link rel="shortcut icon" href="favicon.ico"> 
+	<link rel="stylesheet" type="text/css" href="comonStyle.css">
+
+
+<link rel="stylesheet" href="registration.css">
+
+</head>
+<body>
+
+ <div class="sRegistration">
+        <div class="signup-box">
+            <h2>Hello!</h2>
+            <p>Please signup to continue</p>
+            <form  method="POST" >
+                <!-- وين يودي هذي المعلومة action  -->
+        <!-- updated -->
+                <label >First Name:</label>
+            <input type="text" id="first-name" name="first_name" placeholder="Ali" required>
+
+            <label>Last Name:</label>
+            <input type="text" id="last-name" name="last_name" placeholder="Alshreef"required>
+
+            <label >Student ID:</label>
+            <input type="text" id="student-id" name="student_id" placeholder="444566044"required>
+
+            <label >Major:</label>
+            <select id="major" name="major" required>
+                <option value="" disabled selected>Select your major</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Software Engineering">Software Engineering</option>
+                <option value="Information Technology">Information Technology</option>
+                <option value="Cybersecurity">Cybersecurity</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Artificial Intelligence">Artificial Intelligence</option>
+                <option value="Business Administration">Business Administration</option>
+                <option value="Electrical Engineering">Electrical Engineering</option>
+                <option value="Mechanical Engineering">Mechanical Engineering</option>
+                <option value="Civil Engineering">Civil Engineering</option>
+                <!-- <option value="Other">Other</option> -->
+            </select>
+          
+            <label >Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="0554405569" required>
+
+            <label >Email:</label>
+            <input type="email" id="email" name="email" placeholder="johndoe@gmail.com" required>
+
+            <label >Password:</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+            <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+
+            <label >Profile Photo (Optional):</label>
+            <input type="file" id="profile-photo" name="profile_photo" accept="image/*">
+
+            <button type="submit" class="btn"><a href="studentActivitySearch.html">Sign Up</a></button>
+
+            <!-- <button type="submit" class="btn">Sign Up</button> -->
+            </form>
+        </div>
+
+        <div class="info-box">
+            <div class="logo">
+                <img src="logo2.png" alt="Logo">
+            </div>
+            <h2>GitClub</h2>
+            <p>Already have an account?</p>
+            <button class="btnSecondary"><a href="studentSignIn.html"> Sign In </a></button>
+
+
+        </div>
+        <!-- <video src="https://media.graphassets.com/PB7YfxdDSeWD7TM9S85L" autoplay="" poster="../images/banner-placeholder-img-mobile.jpg" loop="" playsinline="" disableremoteplayback="" class="HeroBanner-video mui-style-1is91aw" style="display: block; transform: none;"></video> -->
+        <!-- <video autoplay="" loop="" preload="auto" class="absolute -z-10 w-full h-full object-cover filter brightness-50 bg-black"><source src="/Users/janaa/Desktop/Web Project/jaa.mp4" type="video/mp4"></video> -->
+
+    </div>
+
+</body>
+</html>
