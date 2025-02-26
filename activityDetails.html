@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo copy.png">  
+    <link rel="icon" type="image/x-icon" href="favicon.ico"> 
+    <link rel="shortcut icon" href="favicon.ico"> 
+    <link rel="stylesheet" href="student.css">
+    <link rel="stylesheet" type="text/css" href="comonStyle.css">
+    <link rel="stylesheet" type="text/css" href="projectStyle.css">
+  
+
+
+
+
+</head>
+<body>
+    <div class="navbar">
+        <ul class="nav-links">
+            <img src="logo.png" alt="gitclub logo" height="40" width="100">
+            <img src="StudentProfile.png" alt="Profile" class="profile" onclick="toggleSidebar()">
+            <li><a href="HomePage.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="mailto:email@example.com">Contact</a></li>
+        </ul>
+    </div>
+    
+    
+    <div class="sidebar" id="sidebar">
+        <img src="StudentProfile.png" alt="Profile">
+        <ul>
+          <li><a href="studentActivitySearch.html"> Activities</a></li>
+            <li><a href="PreviosActicity.html">My Activities</a></li>
+            <li><a href="#">Manage profile</a></li>
+            <li><a href="HomePage.html">Sign out</a></li>
+        </ul>
+      </div>
+      
+      
+
+    <main>
+        <!-- Background Image -->
+        <div class="background">
+            <img src="hackathon-img.png" alt="Activity image">
+        </div>
+
+        <h1 id="activity-title"><br> <br> <br><br> <br> <br> <br> <br><br>Hackathon</h1>
+        
+            <div class="countdown-container">
+                <div class="countdown-box">
+                    <span id="days">00</span>
+                    <small>Days</small>
+                </div>
+                <div class="countdown-box">
+                    <span id="hours">00</span>
+                    <small>Hours</small>
+                </div>
+                <div class="countdown-box">
+                    <span id="minutes">00</span>
+                    <small>Minutes</small>
+                </div>
+                <div class="countdown-box">
+                    <span id="seconds">00</span>
+                    <small>Seconds</small>
+                </div>
+               
+               
+               
+            </div>
+            <br><br>
+            <button class="register-btn">Register</button>
+        </div>
+        <div class="content-box">
+            <h2>Hackathon details</h2>
+            <p>A competition to discover the best solutions for common challenges affecting the experience of students, faculty members, administrative staff, and graduates at King Saud University <strong><br><br>Objectives:</strong>
+                Encourage the KSU community to work together in developing transformative solutions,promote enthusiasm and understanding of KSU's transformation journey and draw creative and passionate individuals to elevate KSU's global standing</p>
+            <div class="details">
+                <span> 24-27 April 🗓️</span>
+                <span> Online 📍 </span>
+                <!-- <span>📘 Online</span> -->
+            </div>
+            <button class="preview-btn" onclick="toggleClubInfo()">Club Details</button>
+
+        </div>
+        <br>
+        <!-- Hidden Club Info Section -->
+<div id="club-info" class="club-info hidden">
+    <h2>Kind Saud Unevirsity Hachathon</h2>
+    <!-- <p><strong>Club Name:</strong> Kind Saud Unevirsity Hachathon</p> -->
+    <p><strong> </strong> A student initiative aimed at empowering university students to develop innovative technological solutions for entrepreneurial projects in specific sectors, aligning with digital transformation and Saudi Vision 2030.</p>
+    <p><strong>Location:</strong> Riyadh, King Saud University </p>
+    <p><strong>For Contact:</strong> <a href="mailto:clubemail@example.com">clubemail@Clubmail.com</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+966123456789">+966 123 456 789</a></p>
+    <button class="preview-btn" onclick="window.location.href='https://hackksu.site/';">
+        Visit website
+    </button>
+    
+
+
+
+</div>
+<!-- Video  -->
+<div class="video-container">
+    <h2>KSU Hackathon Highlights</h2>
+    <video autoplay muted loop controls>
+        <source src="hack.mp4" type="video/mp4">
+    </video>
+</div>
+
+    </main>
+    <footer>
+
+
+        <a id=" location"href="https://maps.app.goo.gl/3rp62YkjKF63yKwy5?g_st=com.google.maps.preview.copy">King Saud University,Riyadh,Saudi Arabia</a>
+        <i class="fa-solid fa-phone-volume"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <i class="fa-brands fa-instagram"></i>
+        
+        <a href="https://www.youtube.com" target="_blank">
+        <i class="fa-brands fa-youtube"></i>
+        </a>
+        
+        <i class="fa-brands fa-tiktok"></i>
+        
+        
+        
+        <p class="copyright">Copyright &copy; 2025 SWE381. King Saud University . All Rights Reserved</p>
+        </footer>
+
+   
+    <script>
+        // Countdown Timer Script
+        const targetDate = new Date("March 10, 2025 00:00:00").getTime();
+    
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeLeft = targetDate - now;
+    
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+    
+            document.getElementById("days").textContent = days;
+            document.getElementById("hours").textContent = hours;
+            document.getElementById("minutes").textContent = minutes;
+            document.getElementById("seconds").textContent = seconds;
+    
+            if (timeLeft < 0) {
+                document.querySelector(".countdown-container").innerHTML = "<h2>Time's Up!</h2>";
+            }
+        }
+    
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    
+    
+        function toggleClubInfo() {
+            var clubInfo = document.getElementById("club-info");
+            if (clubInfo.style.display === "none" || clubInfo.style.display === "") {
+                clubInfo.style.display = "block"; // Show the section
+            } else {
+                clubInfo.style.display = "none"; // Hide the section
+            }
+        }
+      
+        function toggleSidebar() {
+            document.getElementById("sidebar").classList.toggle("active");
+            document.getElementById("main").classList.toggle("active");
+        }
+    </script>
+    <!-- CHATBOT -->
+<script src="//code.tidio.co/krm1ydy1repwdbv1txn0uusau4pb1gox.js" async></script>
+<!-- BALL -->
+<!-- <iframe src='https://my.spline.design/ballsonballs-6864b72a5390cb3ceaa277bdcfd0d3a0/' frameborder='0' width='100%' height='100%'></iframe> -->
+
+
+</body>
+</html>
+
